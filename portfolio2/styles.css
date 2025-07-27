@@ -1,0 +1,1087 @@
+/* Reset and Base Styles - Authentic Among Us Game Theme */
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Fredoka+One:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kalam', cursive;
+    line-height: 1.4;
+    color: #ffffff;
+    overflow-x: hidden;
+    background: #393b44;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+        radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(135deg, #393b44 0%, #2f3349 50%, #393b44 100%);
+    pointer-events: none;
+    z-index: -1;
+    animation: starTwinkle 3s ease-in-out infinite;
+}
+
+@keyframes starTwinkle {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation - Among Us Game UI Style */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #5a6374;
+    border-bottom: 6px solid #3e4651;
+    box-shadow: inset 0 -3px 0 #6b7280, 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    padding: 1.2rem 0;
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo a {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Fredoka One', cursive;
+    color: #ffffff;
+    text-decoration: none;
+    text-shadow: 2px 2px 0 #3e4651, -1px -1px 0 #3e4651, 1px -1px 0 #3e4651, -1px 1px 0 #3e4651;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Kalam', cursive;
+    transition: all 0.2s ease;
+    position: relative;
+    padding: 12px 24px;
+    border-radius: 20px;
+    background: #4a5568;
+    border: 3px solid #6b7280;
+    box-shadow: inset 0 -2px 0 #3e4651, 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.nav-link:hover {
+    background: #e53e3e;
+    border-color: #c53030;
+    transform: translateY(-1px);
+    box-shadow: inset 0 -2px 0 #c53030, 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.nav-link:active {
+    transform: translateY(1px);
+    box-shadow: inset 0 1px 0 #c53030, 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 20px 0 20px;
+    background: #393b44;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 15% 25%, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
+        radial-gradient(circle at 85% 75%, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+        radial-gradient(circle at 45% 85%, rgba(255, 255, 255, 0.06) 1.5px, transparent 1.5px);
+    pointer-events: none;
+    animation: starField 8s ease-in-out infinite;
+}
+
+@keyframes starField {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.hero-title {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    margin-top: 2rem;
+    font-weight: 400;
+    font-family: 'Fredoka One', cursive;
+    color: #ffffff;
+    text-shadow: 
+        3px 3px 0 #3e4651,
+        -1px -1px 0 #3e4651,
+        1px -1px 0 #3e4651,
+        -1px 1px 0 #3e4651,
+        0 4px 8px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.highlight {
+    color: #e53e3e;
+    text-shadow: 
+        3px 3px 0 #c53030,
+        -1px -1px 0 #c53030,
+        1px -1px 0 #c53030,
+        -1px 1px 0 #c53030,
+        0 4px 8px rgba(0, 0, 0, 0.4);
+    font-weight: 400;
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #38b2ac;
+    text-shadow: 
+        2px 2px 0 #2c7a7b,
+        -1px -1px 0 #2c7a7b,
+        1px -1px 0 #2c7a7b,
+        -1px 1px 0 #2c7a7b;
+    font-family: 'Kalam', cursive;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #e2e8f0;
+    font-weight: 400;
+    text-shadow: 1px 1px 0 #3e4651;
+    font-family: 'Kalam', cursive;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 32px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 700;
+    font-family: 'Kalam', cursive;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.2s ease;
+    position: relative;
+    border: 4px solid;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+    background: #e53e3e;
+    color: #ffffff;
+    border-color: #c53030;
+    text-shadow: 1px 1px 0 #c53030;
+}
+
+.btn-primary:hover {
+    background: #c53030;
+    border-color: #9c2626;
+}
+
+.btn-secondary {
+    background: #38b2ac;
+    color: #ffffff;
+    border-color: #2c7a7b;
+    text-shadow: 1px 1px 0 #2c7a7b;
+}
+
+.btn-secondary:hover {
+    background: #2c7a7b;
+    border-color: #285e61;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.profile-placeholder {
+    width: 180px;
+    height: 220px;
+    background: #e53e3e;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: #ffffff;
+    margin: 0 auto 2rem;
+    position: relative;
+    border: 6px solid #c53030;
+    box-shadow: 
+        inset 0 -8px 0 #c53030,
+        0 4px 8px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 0 #c53030;
+}
+
+.profile-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    width: 25px;
+    height: 35px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 
+        40px 0 0 #ffffff,
+        0 0 0 3px #c53030,
+        40px 0 0 3px #c53030;
+}
+
+.profile-placeholder::after {
+    content: '';
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 8px;
+    background: #c53030;
+    border-radius: 4px;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.1); }
+}
+
+/* Section Styles */
+section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 400;
+    font-family: 'Fredoka One', cursive;
+    color: #ffffff;
+    text-shadow: 
+        3px 3px 0 #3e4651,
+        -1px -1px 0 #3e4651,
+        1px -1px 0 #3e4651,
+        -1px 1px 0 #3e4651,
+        0 4px 8px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #00d4ff, #ff6b6b, #ffd93d, #00d4ff);
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+    animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: -100px; }
+    100% { background-position: 100px; }
+}
+
+/* About Section - Among Us Style */
+.about {
+    padding: 100px 0;
+    background: #4a5568;
+    color: #ffffff;
+    position: relative;
+    border-top: 6px solid #3e4651;
+    border-bottom: 6px solid #3e4651;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 25% 25%, rgba(56, 178, 172, 0.1) 3px, transparent 3px),
+        radial-gradient(circle at 75% 75%, rgba(229, 62, 62, 0.1) 2px, transparent 2px);
+    pointer-events: none;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.about-text {
+    background: #5a6374;
+    padding: 2rem;
+    border-radius: 20px;
+    border: 4px solid #6b7280;
+    box-shadow: inset 0 -4px 0 #3e4651, 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    position: relative;
+    font-family: 'Kalam', cursive;
+}
+
+.about-text:hover {
+    transform: translateY(-2px);
+    background: #38b2ac;
+    border-color: #2c7a7b;
+    box-shadow: inset 0 -4px 0 #2c7a7b, 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.about-text p {
+    line-height: 1.6;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-family: 'Kalam', cursive;
+}
+
+.about-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-family: 'Fredoka One', cursive;
+    text-shadow: 2px 2px 0 #3e4651;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Projects Section - Among Us Game Style */
+.projects {
+    padding: 100px 0;
+    background: #393b44;
+    position: relative;
+    border-top: 6px solid #3e4651;
+    border-bottom: 6px solid #3e4651;
+}
+
+.projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 30% 20%, rgba(56, 178, 172, 0.08) 2px, transparent 2px),
+        radial-gradient(circle at 70% 80%, rgba(229, 62, 62, 0.08) 2px, transparent 2px);
+    pointer-events: none;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: #5a6374;
+    border-radius: 20px;
+    border: 4px solid #6b7280;
+    overflow: hidden;
+    box-shadow: inset 0 -4px 0 #3e4651, 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    position: relative;
+    font-family: 'Kalam', cursive;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    background: #38b2ac;
+    border-color: #2c7a7b;
+    box-shadow: inset 0 -4px 0 #2c7a7b, 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+    height: 180px;
+    background: #e53e3e;
+    border-bottom: 4px solid #c53030;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 16px 16px 0 0;
+}
+
+.project-placeholder {
+    font-size: 3.5rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 0 #c53030;
+    font-family: 'Fredoka One', cursive;
+}
+
+.project-content {
+    padding: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.project-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    font-family: 'Fredoka One', cursive;
+    font-weight: 400;
+    text-shadow: 2px 2px 0 #3e4651;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.project-content p {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    font-family: 'Kalam', cursive;
+    text-shadow: 1px 1px 0 #3e4651;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-tech span {
+    background: #4a5568;
+    color: #ffffff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 15px;
+    border: 2px solid #6b7280;
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-family: 'Kalam', cursive;
+    text-shadow: 1px 1px 0 #3e4651;
+    box-shadow: inset 0 -2px 0 #3e4651, 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+}
+
+.project-tech span:hover {
+    background: #e53e3e;
+    border-color: #c53030;
+    transform: translateY(-1px);
+    box-shadow: inset 0 -2px 0 #c53030, 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Kalam', cursive;
+    text-shadow: 1px 1px 0 #3e4651;
+    transition: all 0.2s ease;
+    padding: 0.8rem 1.5rem;
+    border-radius: 15px;
+    border: 3px solid #6b7280;
+    background: #4a5568;
+    box-shadow: inset 0 -2px 0 #3e4651, 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.project-link:hover {
+    background: #e53e3e;
+    border-color: #c53030;
+    transform: translateY(-1px);
+    box-shadow: inset 0 -2px 0 #c53030, 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Section - Among Us Game Style */
+.contact {
+    padding: 100px 0;
+    background: #4a5568;
+    border-top: 6px solid #3e4651;
+    border-bottom: 6px solid #3e4651;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.contact-info {
+    background: #5a6374;
+    padding: 2rem;
+    border-radius: 20px;
+    border: 4px solid #6b7280;
+    box-shadow: inset 0 -4px 0 #3e4651, 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    font-family: 'Kalam', cursive;
+}
+
+.contact-info:hover {
+    transform: translateY(-2px);
+    background: #38b2ac;
+    border-color: #2c7a7b;
+    box-shadow: inset 0 -4px 0 #2c7a7b, 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    font-family: 'Fredoka One', cursive;
+    text-shadow: 2px 2px 0 #3e4651;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-family: 'Kalam', cursive;
+    text-shadow: 1px 1px 0 #3e4651;
+}
+
+.contact-form {
+    background: #5a6374;
+    padding: 2rem;
+    border-radius: 20px;
+    border: 4px solid #6b7280;
+    box-shadow: inset 0 -4px 0 #3e4651, 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    font-family: 'Kalam', cursive;
+}
+
+.contact-form:hover {
+    transform: translateY(-2px);
+    background: #e53e3e;
+    border-color: #c53030;
+    box-shadow: inset 0 -4px 0 #c53030, 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    background: #e53e3e;
+    color: #ffffff;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    border: 4px solid #c53030;
+    box-shadow: inset 0 -3px 0 #c53030, 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    text-shadow: 1px 1px 0 #c53030;
+}
+
+.social-link:hover {
+    background: #38b2ac;
+    border-color: #2c7a7b;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: inset 0 -3px 0 #2c7a7b, 0 5px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 0 #2c7a7b;
+}
+
+.social-link:active {
+    transform: translateY(1px) scale(1.02);
+    box-shadow: inset 0 1px 0 #2c7a7b, 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.social-link:hover::before {
+    left: 100%;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: 'Kalam', cursive;
+    text-shadow: 1px 1px 0 #3e4651;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 3px solid #6b7280;
+    border-radius: 15px;
+    background: #4a5568;
+    color: #ffffff;
+    font-size: 1rem;
+    font-family: 'Kalam', cursive;
+    box-shadow: inset 0 -2px 0 #3e4651, 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #e53e3e;
+    background: #38b2ac;
+    box-shadow: inset 0 -2px 0 #2c7a7b, 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Footer - Among Us Game Style */
+.footer {
+    background: #393b44;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 6px solid #3e4651;
+    position: relative;
+    font-family: 'Kalam', cursive;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    pointer-events: none;
+    animation: starTwinkle 4s ease-in-out infinite;
+}
+
+.footer p {
+    font-size: 1rem;
+    font-weight: 400;
+    text-shadow: 1px 1px 0 #3e4651;
+    position: relative;
+    z-index: 1;
+    font-family: 'Kalam', cursive;
+}
+
+/* Enhanced Responsive Design */
+
+/* Large Desktop */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+    }
+    
+    .profile-placeholder {
+        width: 320px;
+        height: 320px;
+        font-size: 8rem;
+    }
+}
+
+/* Desktop */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1000px;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .profile-placeholder {
+        width: 280px;
+        height: 280px;
+        font-size: 7rem;
+    }
+}
+
+/* Tablet Landscape */
+@media (max-width: 1024px) {
+    .hero-content {
+        gap: 3rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .about-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* Tablet Portrait */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        display: none;
+    }
+    
+    .hero {
+        padding: 100px 1rem 2rem 1rem;
+        min-height: 90vh;
+    }
+    
+    .hero-content {
+        gap: 1.5rem;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+        line-height: 1.1;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .profile-placeholder {
+        width: 250px;
+        height: 250px;
+        font-size: 6rem;
+    }
+    
+    .about-stats {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .btn {
+        width: 200px;
+        text-align: center;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    section {
+        padding: 3rem 0;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .skill-category {
+        padding: 1.5rem;
+    }
+    
+    .project-content {
+        padding: 1.2rem;
+    }
+    
+    .contact-form {
+        padding: 1.5rem;
+    }
+}
+
+/* Mobile Large */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero {
+        padding: 80px 1rem 1rem 1rem;
+        min-height: 85vh;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .profile-placeholder {
+        width: 180px;
+        height: 180px;
+        font-size: 4rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+        width: 180px;
+    }
+    
+    .nav-container {
+        padding: 0 15px;
+    }
+    
+    .nav-logo a {
+        font-size: 1.3rem;
+    }
+    
+    .skill-category {
+        padding: 1rem;
+    }
+    
+    .skill-category h3 {
+        font-size: 1.3rem;
+    }
+    
+    .skill-tag {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .project-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .project-tech span {
+        padding: 0.2rem 0.6rem;
+        font-size: 0.75rem;
+    }
+    
+    .contact-info h3 {
+        font-size: 1.5rem;
+    }
+    
+    .contact-method {
+        font-size: 0.9rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    section {
+        padding: 2rem 0;
+    }
+}
+
+/* Mobile Small */
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .profile-placeholder {
+        width: 150px;
+        height: 150px;
+        font-size: 3.5rem;
+    }
+    
+    .btn {
+        width: 160px;
+        padding: 8px 20px;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .skill-category {
+        padding: 0.8rem;
+    }
+    
+    .project-content {
+        padding: 1rem;
+    }
+    
+    .contact-form {
+        padding: 1rem;
+    }
+}
+
+/* Landscape orientation for mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+        padding: 60px 1rem 1rem 1rem;
+    }
+    
+    .hero-content {
+        gap: 1rem;
+    }
+    
+    .profile-placeholder {
+        width: 100px;
+        height: 100px;
+        font-size: 2.5rem;
+    }
+    
+    .hero-title {
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero-description {
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: row;
+        gap: 1rem;
+    }
+    
+    .btn {
+        width: auto;
+        padding: 6px 16px;
+        font-size: 0.8rem;
+    }
+}
